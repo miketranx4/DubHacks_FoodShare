@@ -10,6 +10,14 @@ body {
     margin-top: 50px;
 }
 
+.containerz {
+    margin: 10px;
+}
+
+.page-header {
+    margin-top: 0px;
+}
+
 #info-content {
 	padding-bottom: 40px;
 }
