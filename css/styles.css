@@ -75,6 +75,8 @@ body {
 .price {
     line-height: 5px;
     float: right;
+    font-weight: bold;
+    margin-right: 15px;
 }
 
 .place {
