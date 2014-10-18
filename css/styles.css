@@ -240,3 +240,8 @@ h1+* {
 .person-top p {
     font-size: 140%;
 }
+
+.book {
+    font-size: 30px;
+    float: right;
+}
