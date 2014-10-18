@@ -55,3 +55,7 @@ body {
 .navbar {
 	border-radius: 0px;
 }
+
+.filter {
+	margin-bottom: 10px;
+}
