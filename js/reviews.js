@@ -47,7 +47,6 @@ function submitReview() {
 
 	var element = document.getElementById('form');
 	var child = document.getElementById('comments');
-	alert(form.childNodes[1]);
 	element.insertBefore(outerDiv, form.childNodes[6]);   //para=row child=comments    adds the full template before the comments
 	//alert(userinput);
 }
