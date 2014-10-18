@@ -1,5 +1,7 @@
 
 function submitReview() {
+	var outerDiv = document.createElement("div");
+	outerDiv.className = "comments";
 
 
 	var userinput = document.getElementById('review-input').value;
@@ -15,11 +17,13 @@ function submitReview() {
 	var name = document.createTextNode("Kyle");     //creates a new username
 	var timeVal = document.createTextNode("just now"); 
 
+
 	time.className = "pull-right";
 	node.appendChild(reply);
 	para.className = "row";
-	innerPara.className = "col-md-12"
+	innerPara.className = "col-md-12";
 
+	outerDiv.appendChild(para);
 	para.appendChild(innerPara);   //adds col-md div to row div
 	var i;
 	var star;
@@ -43,6 +47,7 @@ function submitReview() {
 
 	var element = document.getElementById('form');
 	var child = document.getElementById('comments');
-	element.insertBefore(para, child);   //para=row child=comments
+	alert(form.childNodes[1]);
+	element.insertBefore(outerDiv, form.childNodes[6]);   //para=row child=comments    adds the full template before the comments
 	//alert(userinput);
 }

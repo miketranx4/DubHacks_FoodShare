@@ -244,4 +244,8 @@ h1+* {
 .book {
     font-size: 30px;
     float: right;
+
+}
+text-area {
+	font-weight: 150;
 }
