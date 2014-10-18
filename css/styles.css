@@ -4,12 +4,14 @@ body {
 	font-size: 14px;
 	font-family: 'Helvetica Neue', 'Helvetica', sans-serif;
 	background-color: #FCFCFF;
-	padding-top: 50px;
+}
+
+.container {
+    margin-top: 50px;
 }
 
 #info-content {
-	padding-top: 50px;
-	padding-bottom: 50px;
+	padding-bottom: 40px;
 }
 
 #left-bar {
@@ -97,7 +99,6 @@ body {
 #featured-chefs {
 	text-align: center;
 	vertical-align: middle;
-	padding-top: 50px;
 	padding-bottom: 50px;
 }
 
@@ -201,3 +202,11 @@ h1+* {
 	background-color: green;
 	color: white;
 }
+
+.optz {
+    font-size: 15px;
+    width: 200px;
+    height: 40px;
+}
+
+::-webkit-input-placeholder { color:#000; }
