@@ -217,4 +217,8 @@ h1+* {
     height: 40px;
 }
 
+.blurb {
+	width: 90%;
+}
+
 ::-webkit-input-placeholder { color:#000; }
