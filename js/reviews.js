@@ -1,17 +1,26 @@
 
 function submitReview() {
-	var userinput = document.getElementById('review-input').value;
 
+
+	var userinput = document.getElementById('review-input').value;
+	document.getElementById('review-input').value = " ";
 	var para = document.createElement("div"); //creates a div
 	var node = document.createElement("p"); //creates a paragraph node for reply
+	var innerPara = document.createElement("div"); //creates a col-md div
+	var time = document.createElement("span");     //creates a time span 
+	var line = document.createElement("hr");	   //creates a horizontal line 
+
+
 	var reply = document.createTextNode(userinput); //creates a reply 
+	var name = document.createTextNode("Kyle");     //creates a new username
+	var timeVal = document.createTextNode("just now"); 
+
+	time.className = "pull-right";
 	node.appendChild(reply);
 	para.className = "row";
-	
-
-	var innerPara = document.createElement("div");
 	innerPara.className = "col-md-12"
-	para.appendChild(innerPara);
+
+	para.appendChild(innerPara);   //adds col-md div to row div
 	var i;
 	var star;
 	var space;
@@ -23,19 +32,17 @@ function submitReview() {
 		innerPara.appendChild(space);
 
 	}
-	var name = document.createTextNode("Kyle");
-	innerPara.appendChild(name);
-
-	innerPara.appendChild(node);                       //appends the text to the div
-
-	var line = document.createElement("hr");
-
+	
+	innerPara.appendChild(name);						//adds username 
+	innerPara.appendChild(time);						//adds date span
+	time.appendChild(timeVal);							//adds date text
+	innerPara.appendChild(node);                       //adds comment
 	innerPara.appendChild(line);
 
 
 
 	var element = document.getElementById('form');
 	var child = document.getElementById('comments');
-	element.insertBefore(para, child);
+	element.insertBefore(para, child);   //para=row child=comments
 	//alert(userinput);
 }
