@@ -1,8 +1,15 @@
+@import url(http://fonts.googleapis.com/css?family=Permanent+Marker);
+
 body {
 	font-size: 14px;
-	overflow-y: hidden;
 	font-family: 'Helvetica Neue', 'Helvetica', sans-serif;
 	background-color: #FCFCFF;
+	padding-top: 50px;
+}
+
+#info-content {
+	padding-top: 50px;
+	padding-bottom: 50px;
 }
 
 #left-bar {
@@ -90,7 +97,8 @@ body {
 #featured-chefs {
 	text-align: center;
 	vertical-align: middle;
-	padding-bottom: 25px;	
+	padding-top: 50px;
+	padding-bottom: 50px;
 }
 
 .jumbo {
@@ -104,7 +112,9 @@ body {
 }
 
 footer {
+	padding-top: 20px;
 	background-color: #08240D;
+	color: #FFFFFF;
 }
 
 .center {
@@ -143,6 +153,7 @@ footer {
 }
 
 .person-top {
+	text-align: center;
 }
 
 .person-bottom {
@@ -159,11 +170,13 @@ footer {
 	vertical-align: middle;
 }
 
-#intermission-top {
-	padding-top: 25px;
+#intermission {
+	padding-top: 50px;
+	padding-bottom: 50px;
 }
 
 #featured-chefs h2 {
+	padding-top: 40px;
 	font-size: 300%;
 	font-color: #FFFFFF;
 }
@@ -179,4 +192,8 @@ h1+* {
   border-top: solid 2px #adac97;
   padding-top: 28px;
   margin-top: -28px;
+}
+
+.special {
+	font-family: 'Permanent Marker', 'Helvetica Neue', 'Helvetica', sans-serif;
 }
