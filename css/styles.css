@@ -1,5 +1,6 @@
 body {
 	font-size: 14px;
+	overflow-y: hidden;
 }
 
 #left-bar {
@@ -19,7 +20,7 @@ body {
 }
 
 .profile:hover {
-	background-color: gray;
+	background-color: #EDEDED;
 }
 
 .profilepic {
