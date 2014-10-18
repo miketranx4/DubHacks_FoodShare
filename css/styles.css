@@ -10,3 +10,13 @@
 	padding: 10px;
 	height: 100%;
 }
+
+.header-left {
+	width: 30%;
+	float: left;
+}
+
+.header-right {
+	width: 70%;
+	float: right;
+}
