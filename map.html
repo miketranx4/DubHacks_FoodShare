@@ -18,7 +18,6 @@
 	     	var map;
 	     	var hostPlaces = {};
 	     	var prev_infowindow = false;
-	     	var hover = false;
 
 	     	hostPlaces["host1"] = {
 	     		Lat: 47.673988,
@@ -105,11 +104,6 @@
 				}
 			}
 
-			// function popWindow(e) {
-			// 	var click_id = e.getAttribute("value");
-			// 	console.log(click_id);
-			// }
-
 			function createMarker(lat, lng, infowindow) {
 				var mark = new google.maps.LatLng(lat, lng);
 				addMarker(mark, infowindow);
@@ -128,18 +122,14 @@
       				radius: 1000
 		        });
 				  google.maps.event.addListener(marker, 'click', function() {
-				  	hover == true;
+				  	var d = document.getElementById("link1");
 				  	if (prev_infowindow) {
 				  		prev_infowindow.close();
-				  		hover == false;
+				  		d.className = d.className + "";
 				  	}
-
 				  	prev_infowindow = infowindow;
    					infowindow.open(map,marker);
-   					if (hover == true) {
-   						var d = document.getElementById("link1");
-   						d.className = d.className + " "
-   					}
+   					d.className = d.className + " givebackground";
   				});
 			}
 
@@ -208,17 +198,17 @@
 				</form>
 			</div>
 			
-			<div class="profile">
+			<div class="profile" id="link1">
 				<img src="img/huie.jpg" alt="Profile Pic" class="profilepic">
-				<p class="event-title">Chocolate Chip Cookies</p>
+				<p class="event-title">Pizza Party</p>
 				<p class="name">Daniel Huie</p>
-				<p class="price">$2</p>
+				<p class="price">$10</p>
 				<p class="stars">&#9734;&#9734;&#9734;&#9734;&#9734;</p>
 				<p class="place">Seattle, WA</p>
 			</div>
 			<div class="profile">
 				<img src="img/thai.jpg" alt="Profile Pic" class="profilepic">
-				<p class="event-title">Pizza Party</p>
+				<p class="event-title">Hot Dogs</p>
 				<p class="name">Brandon Thai</p>
 				<p class="price">$6</p>
 				<p class="stars">&#9734;&#9734;&#9734;&#9734;</p>
@@ -246,7 +236,7 @@
 				<p class="name">Nabil Sutjipto</p>
 				<p class="price">$12</p>
 				<p class="stars">&#9734;&#9734;&#9734;</p>
-				<p class="place">Seattle, WA<e</p>
+				<p class="place">Seattle, WA</p>
 			</div>
 
 		</div>
