@@ -104,7 +104,6 @@ body {
 .jumbo {
 	font-size: 500%;
 	color: #fff;
-	background-color: #000;
 }
 
 .large {
@@ -196,4 +195,9 @@ h1+* {
 
 .special {
 	font-family: 'Permanent Marker', 'Helvetica Neue', 'Helvetica', sans-serif;
+}
+
+.btn-green {
+	background-color: green;
+	color: white;
 }
