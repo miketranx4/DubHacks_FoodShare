@@ -69,3 +69,10 @@ footer {
 	margin-right: auto;
 	margin-left: auto;
 }
+
+#event-desc {
+	display: inline-block;
+}
+
+#user-link {
+	display: inline-block;
