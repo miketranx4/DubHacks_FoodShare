@@ -1,0 +1,12 @@
+#map-canvas {
+	width: 70%;
+	float: right;
+}
+
+#left-bar {
+	width: 30%;
+	float: left;
+	background-color: gray;
+	padding: 10px;
+	height: 100%;
+}
