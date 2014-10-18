@@ -1,65 +1,84 @@
 body {
 	font-size: 14px;
 	overflow-y: hidden;
+	font-family: 'Helvetica Neue', 'Helvetica', sans-serif;
+}
+
+#map-canvas {
+	width: 70%;
+	float: right;
 }
 
 #left-bar {
 	width: 30%;
-	position: absolute;
-	z-index: 99;
-	background-color: white;
-	opacity: .9;
+	float: left;
+	background-color: gray;
 	padding: 10px;
 	height: 100%;
-	overflow-y: scroll;
 }
 
-.profile {
-	margin-bottom: 30px;
-	padding: 5px;
+.header-left {
+	width: 30%;
+	float: left;
 }
 
 .profile:hover {
 	background-color: #EDEDED;
 }
-
-.profilepic {
-	float: left;
-	height: 60px;
-	border: 1px solid gray;
-	margin-right: 10px;
-}
-
-.event-title {
-	font-size: 150%;
-	line-height: 14px;
-}
-
-.name {
-	line-height: 5px;
-}
-
-.stars {
-	line-height: 5px;
-}
-
-.price {
-	line-height: 5px;
+.header-right {
+	width: 70%;
 	float: right;
 }
 
-.place {
-	line-height: 5px;
+.profilepic {
+	float: left;
 }
-
 
 .navbar {
 	border-radius: 0px;
 }
 
-.filter {
-	margin-bottom: 10px;
+#main {
+	background-image: url(../img/background.jpg);
+	background-repeat: no-repeat;
+	background-attachment: fixed;	
+	padding: 0;
+	margin: 0;
 }
+
+#featured-chefs {
+	padding: 0;
+	margin: 0;
+}
+
+#featured-chefs h2 {
+	font-size: 300%;
+	font-color: #FFFFFF;
+	text-align: center;
+}
+
+.jumbo {
+	font-size: 500%;
+	text-align: center;
+}
+
+.large {
+	font-size: 300%;
+}
+
+footer {
+	background-color: #08240D;
+}
+
+.center {
+	margin-right: auto;
+	margin-left: auto;
+}
+
+#event-desc {
+	display: inline-block;
+}
+
 
 .person-icon {
 	width: 100px;
@@ -88,4 +107,8 @@ body {
 .person-bottom {
 	clear: both;
 	padding: 15px;
+}
+
+#user-link {
+	display: inline-block;
 }
