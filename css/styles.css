@@ -253,3 +253,7 @@ h1+* {
 text-area {
 	font-weight: 150;
 }
+
+h5 {
+	text-align: center;
+}
