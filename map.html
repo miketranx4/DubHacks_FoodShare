@@ -13,10 +13,12 @@
      			<script type="text/javascript"
       		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBTrq5fHCCUzcIwEybMjYo4dr9jZP5koos">
     	</script>
-     	<script type="text/javascript">
+     		<script type="text/javascript">
+
 	     	var map;
 	     	var hostPlaces = {};
 	     	var prev_infowindow = false;
+	     	var hover = false;
 
 	     	hostPlaces["host1"] = {
 	     		Lat: 47.673988,
@@ -126,12 +128,18 @@
       				radius: 1000
 		        });
 				  google.maps.event.addListener(marker, 'click', function() {
+				  	hover == true;
 				  	if (prev_infowindow) {
 				  		prev_infowindow.close();
+				  		hover == false;
 				  	}
 
 				  	prev_infowindow = infowindow;
    					infowindow.open(map,marker);
+   					if (hover == true) {
+   						var d = document.getElementById("link1");
+   						d.className = d.className + " "
+   					}
   				});
 			}
 

@@ -87,6 +87,17 @@
         'Thanks for logging in, ' + response.name + '!';
     });
   }
+
+
+    $.ajax({
+        url: 
+        data: {action: "test"},
+        type: "post",
+        success: function(output) {
+            alert(output);
+        }
+
+    });
 </script>
     </head>
     <body>
@@ -242,5 +253,7 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 
     </body>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>    
+
 </html>
 
