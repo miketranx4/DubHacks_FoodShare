@@ -1,29 +1,51 @@
-#map-canvas {
-	width: 70%;
-	float: right;
+body {
+	font-size: 14px;
 }
 
 #left-bar {
 	width: 30%;
-	float: left;
-	background-color: gray;
+	position: absolute;
+	z-index: 99;
+	background-color: white;
+	opacity: .8;
 	padding: 10px;
 	height: 100%;
+	overflow-y: scroll;
 }
 
-.header-left {
-	width: 30%;
-	float: left;
-}
-
-.header-right {
-	width: 70%;
-	float: right;
+.profile {
+	margin-bottom: 30px;
 }
 
 .profilepic {
 	float: left;
+	height: 60px;
+	border: 1px solid gray;
+	margin-right: 10px;
 }
+
+.event-title {
+	font-size: 150%;
+	line-height: 14px;
+}
+
+.name {
+	line-height: 5px;
+}
+
+.stars {
+	line-height: 5px;
+}
+
+.price {
+	line-height: 5px;
+	float: right;
+}
+
+.place {
+	line-height: 5px;
+}
+
 
 .navbar {
 	border-radius: 0px;
