@@ -15,10 +15,32 @@
     	</script>
      	<script type="text/javascript">
 	     	var map;
+	     	var hostPlaces = {};
+	     	hostPlaces["host1"] = {
+	     		Lat: 47.673988,
+	     		Lng: -122.121512
+	     	};
+	     	hostPlaces["host2"] = {
+	     		Lat: 47.610377,
+	     		Lng: -122.200679
+	     	};
+	     	hostPlaces["host3"] = {
+	     		Lat: 47.677000,
+	     		Lng: -122.385000
+	     	};
+	     	hostPlaces["host4"] = {
+	     		Lat: 47.610594,
+	     		Lng: -122.317228
+	     	};
+	     	hostPlaces["host5"] = {
+	     		Lat: 47.755653,
+	     		Lng: -122.341518
+	     	};
 		    function initialize() {
+
 		    	var mapOptions = {
-		          center: { lat: -34.397, lng: 150.644},
-		          zoom: 8,
+		          center: { lat: 47.606209, lng: -122.332071},
+		          zoom: 10,
 		          mapTypeControl: true,
 		   			mapTypeControlOptions: {
 				        style: google.maps.MapTypeControlStyle.HORIZONTAL_BAR,
@@ -42,6 +64,10 @@
 		        };
 		        map = new google.maps.Map(document.getElementById('map-canvas'),
 		            mapOptions);
+
+		        var myLatlng = new google.maps.LatLng(47.688783, -122.338300);
+
+
 				if(navigator.geolocation) {
 					navigator.geolocation.getCurrentPosition(function(position) {
 					  var pos = new google.maps.LatLng(position.coords.latitude,
@@ -50,7 +76,6 @@
 					  var infowindow = new google.maps.InfoWindow({
 					    map: map,
 					    position: pos,
-					    content: 'Location found using HTML5.'
 					  });
 
 					  map.setCenter(pos);
@@ -60,6 +85,29 @@
 				} else {
 					handleNoGeolocation(false);
 				}
+
+				for(var host in hostPlaces) {
+					createMarker(hostPlaces[host].Lat, hostPlaces[host].Lng);
+				} 
+			}
+
+			function createMarker(lat, lng){
+				var mark = new google.maps.LatLng(lat, lng);
+				addMarker(mark);
+			}
+
+			function addMarker(location) {
+					var marker = new google.maps.Circle({
+		        	position: location,
+		        	map: map,
+		        	strokeColor: '#FF0000',
+      				strokeOpacity: 1,
+      				strokeWeight: 2,
+      				fillColor: '#FF0000',
+     				fillOpacity: 0.5,
+     				center: location,
+      				radius: 1000
+		        });
 			}
 
 			function handleNoGeolocation(errorFlag) {
