@@ -61,7 +61,7 @@
                             <div class="person-top">
                                 <p>Enter Location</p>
                                 <form action="demo_form.asp">
-                                  <input class="optz" type="text" name="fname" placeholder="City, State"><br>
+                                  <input class="optz" type="text" name="fname" placeholder="City, State" onfocus="this.placeholder = ''"><br>
                                 </form> 
                             </div>
                         </div>
@@ -81,11 +81,14 @@
                             <div class="person-top">
                                 <p>Select number of guests</p>
                                 <form action="demo_form.asp">
-                                 <input class="optz" type="number" name="quantity" min="1" max="25" placeholder="# of Guests">
+                                 <input class="optz" type="number" name="quantity" min="1" max="25" onfocus="this.placeholder = ''" placeholder="# of Guests">
                                 </form> 
                             </div>
                         </div>
                     </div>
+
+                    <button class="search-but">Search</button>
+
                 </div>  
 
             </div>   
