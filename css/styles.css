@@ -47,6 +47,10 @@ body {
     background-color: #EDEDED;
 }
 
+.givebackground {
+	background-color: #EDEDED;
+}
+
 .profilepic {
     float: left;
     height: 60px;
